@@ -13,5 +13,14 @@ namespace soccerLeagues.Web.Helpers
 
         TeamViewModel ToTeamViewModel(TeamEntity teamEntity);
 
+        TournamentEntity ToTournamentEntity(TournamentViewModel model, string path, bool isNew);
+
+        TournamentViewModel ToTournamentViewModel(TournamentEntity tournamentEntity);
+
+        Task<GroupEntity> ToGroupEntityAsync(GroupViewModel model, bool isNew);
+
+        GroupViewModel ToGroupViewModel(GroupEntity groupEntity);
+
+
     }
 }

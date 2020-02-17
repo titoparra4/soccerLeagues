@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using soccerLeagues.Web.Data;
+using soccerLeagues.Web.Helpers;
 
 namespace soccerLeagues.Web
 {
@@ -40,7 +41,8 @@ namespace soccerLeagues.Web
             });
 
 
-
+            services.AddScoped<IImageHelper, ImageHelper>();
+            services.AddScoped<IConverterHelper, ConverterHelper>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 

@@ -21,6 +21,11 @@ namespace soccerLeagues.Web.Helpers
 
         GroupViewModel ToGroupViewModel(GroupEntity groupEntity);
 
+        Task<GroupDetailEntity> ToGroupDetailEntityAsync(GroupDetailViewModel model, bool isNew);
+
+        GroupDetailViewModel ToGroupDetailViewModel(GroupDetailEntity groupDetailEntity);
+
+
 
     }
 }
